@@ -1,4 +1,4 @@
-# enumerable.rb
+# rubocop:disable Metrics/ClassLength
 module Enumerable
   # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
