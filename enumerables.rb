@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # enumerable.rb
 module Enumerable
   def my_each
@@ -58,8 +56,8 @@ module Enumerable
 
   def my_inject
     sum = 0
-    to_a.my_each { |item| sum = yield(sum, item) }
     if sum != 0
+    to_a.my_each { |item| sum = yield(sum, item) }
     else
       sum = 1
       to_a.my_each { |item| sum = yield(sum, item) }
