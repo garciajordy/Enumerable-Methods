@@ -1,5 +1,5 @@
 module Enumerable
-  # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/ClassLength
+  # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
   def my_each
     i = 0
     return to_enum unless block_given?
@@ -102,7 +102,7 @@ module Enumerable
   end
 
   def my_inject(value = nil, symbol = nil)
-    # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/ClassLength
+    # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
     if (!value.nil? && symbol.nil?) && (value.is_a?(Symbol) || value.is_a?(String))
       symbol = value
@@ -117,7 +117,6 @@ module Enumerable
   end
 end
 
-# multiply_els
 def multiply_els(arr)
   arr.my_inject(:*)
 end
