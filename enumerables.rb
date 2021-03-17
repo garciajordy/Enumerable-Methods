@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # enumerable.rb
 module Enumerable
   def my_each
@@ -63,4 +65,8 @@ module Enumerable
     to_a.my_each { |item| sum = yield(sum, item) }
     sum
   end
+end
+# multiply_els
+def multiply_els(arr)
+  arr.my_inject { |sum, num| sum * num }
 end
