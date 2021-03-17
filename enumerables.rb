@@ -58,10 +58,8 @@ module Enumerable
     sum = 0
       to_a.my_each { |item| sum = yield(sum, item) }
     return sum if sum != 0
-    else
       sum = 1
       to_a.my_each { |item| sum = yield(sum, item) }
-    end
-    sum
+      sum
   end
 end
