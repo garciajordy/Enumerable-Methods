@@ -65,6 +65,4 @@ Feel free to check the [issues page](https://github.com/garciajordy/Enumerable-M
 
 Give ⭐ Star me on GitHub — it helps!
 
-## 📝 License
 
-This project is [MIT](lic.url) licensed.
