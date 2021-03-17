@@ -1,4 +1,3 @@
-# enumerable.rb
 module Enumerable
   # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
@@ -118,6 +117,7 @@ module Enumerable
     value
   end
 end
+
 # multiply_els
 def multiply_els(arr)
   arr.my_inject(:*)
