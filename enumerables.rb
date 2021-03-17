@@ -1,3 +1,4 @@
+# enumerable.rb
 module Enumerable
   # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
@@ -38,7 +39,7 @@ module Enumerable
       to_a.my_each { |item| return false if item.nil? || item == false }
     elsif !params.nil? && (params.is_a? Class)
       to_a.my_each { |item| return false unless [item.class].include?(params) }
-    elsif !params.nil? && params.class == Regexp
+    elsif !params.nil? && params.instance_of?(Regexp)
       to_a.my_each { |item| return false unless item.match(params) }
     else
       to_a.my_each { |item| return false if item != params }
@@ -54,7 +55,7 @@ module Enumerable
       to_a.my_each { |item| return true if item }
     elsif !params.nil? && (params.is_a? Class)
       to_a.my_each { |item| return true if [item.class].include?(params) }
-    elsif !params.nil? && params.class == Regexp
+    elsif !params.nil? && params.instance_of?(Regexp)
       to_a.my_each { |item| return true if item.match(params) }
     else
       to_a.my_each { |item| return true if item == params }
@@ -69,7 +70,7 @@ module Enumerable
       to_a.my_each { |item| return true if item == false }
     elsif !params.nil? && (params.is_a? Class)
       to_a.my_each { |item| return false if [item.class].include?(params) }
-    elsif !params.nil? && params.class == Regexp
+    elsif !params.nil? && params.instance_of?(Regexp)
       to_a.my_each { |item| return false if item.match(params) }
     else
       to_a.my_each { |item| return false if item == params }
@@ -117,7 +118,6 @@ module Enumerable
     value
   end
 end
-
 # multiply_els
 def multiply_els(arr)
   arr.my_inject(:*)
