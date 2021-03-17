@@ -1,6 +1,6 @@
-# rubocop:disable Metrics/ClassLength
+
 module Enumerable
-  # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+  # rubocop:disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/ClassLength
 
   def my_each
     i = 0
@@ -104,7 +104,7 @@ module Enumerable
   end
 
   def my_inject(value = nil, symbol = nil)
-    # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+    # rubocop:enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/ClassLength
 
     if (!value.nil? && symbol.nil?) && (value.is_a?(Symbol) || value.is_a?(String))
       symbol = value
