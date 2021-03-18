@@ -52,7 +52,7 @@ module Enumerable
     elsif params.nil?
       to_a.my_each { |item| return true if item }
     elsif !params.nil? && (params.is_a? Class)
-      to_a.my_each { |item| return true if [item.class,item.class.superclass].include?(params) }
+      to_a.my_each { |item| return true if [item.class, item.class.superclass].include?(params) }
     elsif !params.nil? && params.instance_of?(Regexp)
       to_a.my_each { |item| return true if item.match(params) }
     else
