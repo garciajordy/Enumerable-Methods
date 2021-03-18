@@ -36,7 +36,7 @@ module Enumerable
     elsif params.nil?
       to_a.my_each { |item| return false if item.nil? || item == false }
     elsif !params.nil? && (params.is_a? Class)
-      to_a.my_each { |item| return false unless [item.class].include?(params) }
+      to_a.my_each { |item| return false unless [item.class, item.class.superclass].include?(params) }
     elsif !params.nil? && params.instance_of?(Regexp)
       to_a.my_each { |item| return false unless item.match(params) }
     else
@@ -52,7 +52,7 @@ module Enumerable
     elsif params.nil?
       to_a.my_each { |item| return true if item }
     elsif !params.nil? && (params.is_a? Class)
-      to_a.my_each { |item| return true if [item.class].include?(params) }
+      to_a.my_each { |item| return true if [item.class,item.class.superclass].include?(params) }
     elsif !params.nil? && params.instance_of?(Regexp)
       to_a.my_each { |item| return true if item.match(params) }
     else
@@ -63,17 +63,10 @@ module Enumerable
 
   def my_none?(params = nil)
     if block_given?
-      to_a.my_each { |item| return true if yield(item) == false }
-    elsif params.nil?
-      to_a.my_each { |item| return true if item == false }
-    elsif !params.nil? && (params.is_a? Class)
-      to_a.my_each { |item| return false if [item.class].include?(params) }
-    elsif !params.nil? && params.instance_of?(Regexp)
-      to_a.my_each { |item| return false if item.match(params) }
+      !my_any?(&Proc.new)
     else
-      to_a.my_each { |item| return false if item == params }
+      !my_any?(params)
     end
-    true
   end
 
   def my_count(params = nil)
