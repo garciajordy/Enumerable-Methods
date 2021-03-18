@@ -15,10 +15,6 @@ In this project, I have implemented my own version of Ruby’s enumerable method
 - my_inject
 - multiply_els
 
-## Live Code
-
-[![Run on Repl.it](https://repl.it/badge/github/acushlakoncept/Enumerable)](https://replit.com/@JordyGarcia/Enumerables#main.rb)
-
 ## Built With
 
 - Ruby
@@ -53,11 +49,11 @@ $ gem install rspec
 - Github: [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/garciajordy/)
 - Linkedin: [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jordy-garcia-675849206/)
 
-👤 **Juliana**
+👤 **Juliana Osemeke**
 
-- Github: [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com//)
-- Twitter: [![](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-- Linkedin: [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in//)
+- Github: [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JulianaOsemeke/)
+- Twitter: [![](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/JulianaOsemeke)
+- Linkedin: [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julianaosemeke/)
 
 ## 🤝 Contributing
 
@@ -69,6 +65,4 @@ Feel free to check the [issues page](https://github.com/garciajordy/Enumerable-M
 
 Give ⭐ Star me on GitHub — it helps!
 
-## 📝 License
 
-This project is [MIT](lic.url) licensed.
