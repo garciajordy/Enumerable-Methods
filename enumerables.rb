@@ -61,11 +61,11 @@ module Enumerable
     false
   end
 
-  def my_none?(params = nil)
+  def my_none?(prms = nil)
     if block_given?
       !my_any?(&Proc.new)
     else
-      !my_any?(params)
+      !my_any?(prms)
     end
   end
 
